@@ -7,17 +7,25 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data(){
+    return {};
+  },
+  mounted(){
+    this.zoom();
+  },
+  methods:{
+    zoom(){
+      let w = window.innerWidth;
+      let app = document.getElementById('app');
+      app.style.zoom = w / 750;
+    }
+  }
 }
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family: '微软雅黑', Helvetica, Arial, sans-serif;
 }
 </style>
